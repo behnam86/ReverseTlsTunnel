@@ -10,7 +10,7 @@ check_dependencies() {
     fi
 }
 
-#Check installed service
+# Check installed service
 check_installed() {
     if [ -f "/etc/systemd/system/tunnel.service" ]; then
         echo "The service is already installed."
@@ -122,7 +122,7 @@ check_update() {
     installed_version=$(./RTT -v 2>&1 | grep -o '"[0-9.]*"')
 
     # Fetch the latest version from GitHub releases
-    latest_version=$(curl -s https://api.github.com/repos/radkesvat/ReverseTlsTunnel/releases/latest | grep -o '"tag_name": "[^"]*"' | cut-d":" -f2 | sed 's/["V ]//g' | sed 's/^/"/;s/$/"/')
+    latest_version=$(curl -s https://api.github.com/repos/radkesvat/ReverseTlsTunnel/releases/latest | grep -o '"tag_name": "[^"]*"' | cut -d":" -f2 | sed 's/["V ]//g' | sed 's/^/"/;s/$/"/')
 
     # Compare the installed version with the latest version
     if [[ "$latest_version" > "$installed_version" ]]; then
@@ -154,4 +154,15 @@ case $choice in
         install
         ;;
     2)
-       
+        uninstall
+        ;;
+    3)
+        check_update
+        ;;
+    0)
+        exit
+        ;;
+    *)
+        echo "Invalid choice. Please try again."
+        ;;
+esac
