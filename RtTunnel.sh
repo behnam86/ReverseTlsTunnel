@@ -1,6 +1,8 @@
 #!/bin/bash
 
-author="Lord Of The Shadows" # نام نویسنده
+# Author: The Lord Of The Shadows
+
+version="1.0"
 
 # Function to check if wget is installed, and install it if not
 check_dependencies() {
@@ -134,11 +136,10 @@ check_update() {
 
 #ip & version
 myip=$(hostname -I | awk '{print $1}')
-version=$(./RTT -v 2>&1 | grep -o 'version="[0-9.]*"')
 
 # Main menu
 clear
-echo "Author: $author" # نمایش نام نویسنده
+echo "Author: The Lord Of The Shadows"
 echo "Your IP is: ($myip) "
 echo ""
 echo " --------#- Reverse Tls Tunnel -#--------"
@@ -146,7 +147,7 @@ echo "1) Install (Multiport)"
 echo "2) Uninstall"
 echo "3) Check Update"
 echo "0) Exit"
-echo " --------------$version---------------"
+echo " --------------Version $version---------------"
 read -p "Please choose: " choice
 
 case $choice in
