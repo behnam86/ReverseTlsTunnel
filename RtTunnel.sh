@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Author: The Lord Of The Shadows
+# Author: Lord Of The Shadows
 
 version="1.0"
 
