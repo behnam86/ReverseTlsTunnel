@@ -139,7 +139,7 @@ myip=$(hostname -I | awk '{print $1}')
 
 # Main menu
 clear
-echo "Author: The Lord Of The Shadows"
+echo "Author: Lord Of The Shadows"
 echo "Your IP is: ($myip) "
 echo ""
 echo " --------#- Reverse Tls Tunnel -#--------"
