@@ -5,5 +5,7 @@ https://t.me/shadows6586
 
 برای نصب پروژه، دستور زیر را در ترمینال اجرا کنید:
 
+Install:
+
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/behnam86/ReverseTlsTunnel/main/RtTunnel.sh)
